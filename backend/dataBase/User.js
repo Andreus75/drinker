@@ -39,6 +39,16 @@ const userSchema = new Schema({
     },
     avatar: {
         type: String
+    },
+    is_login: {
+        type: Boolean,
+        default: false,
+        required: true
+    },
+    is_active: {
+        type: Boolean,
+        default: false,
+        required: true
     }
 }, {timestamps: true, toObject: { virtuals: true }, toJSON: { virtuals: true }});
 

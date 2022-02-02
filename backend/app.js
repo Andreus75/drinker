@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // // const swaggerUi = require('swagger-ui-express');
 // const fileUpload = require('express-fileupload');
 // const cors = require('cors');
-//
+require('dotenv').config();
 const { MONGO_CONNECT_URL, PORT, HOST } = require('./configs/config');
 // // const startCron = require('./cron');
 // // const swaggerJson = require('./docs/swagger.json');
@@ -17,14 +17,15 @@ mongoose.connect(MONGO_CONNECT_URL).then(() => {
 // app.use(fileUpload({}));
 // app.use(cors({origin: 'http://localhost:3000'}));
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 //
-const { userRouter } = require('./routers');
+const { userRouter, authRouter, restorationRouter } = require('./routers');
 // // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerJson));
-
+app.use('/auth', authRouter);
+app.use('/restorations', restorationRouter);
 app.use('/users', userRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
     console.log(`App listen ${PORT}`);
     // startCron();
 });

@@ -11,6 +11,12 @@ const restorationSchema = new Schema({
         required: true,
         trim: true
     },
+    average_check: {
+        type: Number,
+        default: 0,
+        required: true,
+        trim: true
+    },
     rating: {
         type: Number,
         default: 0,
@@ -25,6 +31,12 @@ const restorationSchema = new Schema({
     },
     photo: {
         type: String
+    },
+    moderation_admin: {
+        type: Boolean,
+        default: false,
+        required: true,
+        trim: true
     },
     contact_id: {
         type: Schema.Types.ObjectId,
