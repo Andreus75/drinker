@@ -1,0 +1,13 @@
+let GET_USERS = 'GET_USERS';
+let GET_USER = 'GET_USER';
+let ADD_USER = 'ADD_USER';
+let UPDATE_USER = 'UPDATE_USER';
+let DELETE_USER = 'DELETE_USER';
+
+export {
+    GET_USERS,
+    GET_USER,
+    ADD_USER,
+    UPDATE_USER,
+    DELETE_USER
+}

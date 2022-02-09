@@ -6,6 +6,7 @@ module.exports = {
     USER_WITH_THIS_ID_IS_MISSING: 'user with this id is missing',
     USER_EMAIL_OR_PASSWORD_IS_WRONG: 'user email or password is wrong',
     WRONG_TEMPLATE_NAME: 'wrong template name',
+    THIS_ADDRESS_USE_ALREADY: 'this address use already',
 
     SuccessOK: 200,
     SuccessCreated: 201,

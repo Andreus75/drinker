@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    background: gray;
+    height: 800%;
+    min-height: 300px;
+    width: 100%;
+}
+.filter_section {
+    width: 20%;
+}
+.main_section {
+    width: 80%;
+}

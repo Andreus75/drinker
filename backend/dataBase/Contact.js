@@ -1,21 +1,21 @@
 const { Schema, model} = require('mongoose');
 
-const inviteGuestsSchema = new Schema({
-    days: {
+const contactSchema = new Schema({
+    name_manager: {
         type: String,
         required: true,
         trim: true
     },
-    start_hour: {
-        type: String,
+    phone: {
+        type: Number,
         required: true,
         trim: true
     },
-    end_hour: {
+    email: {
         type: String,
         required: true,
         trim: true
     }
 }, {timestamps: true, toObject: {virtuals: true}, toJSON: {virtuals: true}});
 
-module.exports = model('invite_guests', inviteGuestsSchema);
+module.exports = model('contact', contactSchema);

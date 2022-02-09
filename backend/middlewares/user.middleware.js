@@ -12,7 +12,7 @@ module.exports = {
             const { error, value } = validator.validate(req.body);
 
             if (error) {
-
+                console.log(error);
                 return next({
                     message: new Error(error.details[0].message),
                     status: ClientErrorBadRequest
