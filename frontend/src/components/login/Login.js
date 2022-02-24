@@ -22,7 +22,7 @@ export default function Login (props) {
 
         await login(auth);
 
-        history.push('/restorations');
+        history.push('/main/restorations');
     }
 
     return (

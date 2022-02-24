@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 // // const swaggerUi = require('swagger-ui-express');
 const fileUpload = require('express-fileupload');
-const cors = require('cors');
+const cors = require('cors')
+;
 require('dotenv').config();
+
 const { MONGO_CONNECT_URL, PORT, HOST } = require('./configs/config');
 // // const startCron = require('./cron');
 // // const swaggerJson = require('./docs/swagger.json');
-//
+const createDefaultData = require('./util/default-data.utils');
 const app = express();
 
 mongoose.connect(MONGO_CONNECT_URL).then(() => {
@@ -23,13 +25,14 @@ const { addressRouter, authRouter, contactRouter, reviewRouter, restorationRoute
 // // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerJson));
 app.use('/address', addressRouter);
 app.use('/auth', authRouter);
-app.use('/contact', contactRouter);
+app.use('/contacts', contactRouter);
 app.use('/restorations', restorationRouter);
 app.use('/review', reviewRouter);
 app.use('/users', userRouter);
 
 app.listen(PORT, HOST, () => {
     console.log(`App listen ${PORT}`);
+    createDefaultData();
     // startCron();
 });
 

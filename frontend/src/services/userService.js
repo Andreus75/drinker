@@ -18,7 +18,7 @@ const createUser = async (user, avatar) => {
         headers: {
             "Content-type": "multipart/form-data"
         }
-    }).then(res => console.log(res.data));
+    });
 }
 
 const getUsers = () => {

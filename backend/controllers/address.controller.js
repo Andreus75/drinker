@@ -4,14 +4,23 @@ const {SuccessCreated} = require('../configs/error-enum');
 module.exports = {
     createAddress: async (req, res, next) => {
         try {
-            console.log('createAddress');
             const { city, street, number } = req.body;
 
             const address = await Address.create({city, street, number});
 
             req.address = address;
-next();
-            // res.status(SuccessCreated).json(address);
+
+            next();
+        } catch (e) {
+            next(e);
+        }
+    },
+
+    getAddressById: (req, res, next) => {
+        try {
+            const address = req.address;
+
+            res.json(address);
         } catch (e) {
             next(e);
         }

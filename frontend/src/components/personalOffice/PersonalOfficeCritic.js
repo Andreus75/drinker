@@ -1,7 +1,6 @@
-import "./PersonalOffice.css"
 import {useState} from "react";
 
-export default function PersonalOfficeUser() {
+export default function PersonalOfficeCritic () {
 
     let [start_data, setStart_data] = useState('');
     let [end_data, setEnd_data] = useState('');
@@ -16,8 +15,8 @@ export default function PersonalOfficeUser() {
     }
 
     return (
-        <div className={'personal_office'}>
-            <p>Особистий Кабінет User</p>
+        <div>
+            <p>Особистий Кабінет Critic</p>
             <div className={'main'}>
                 <div className={'my_nav'}>
                     <button>Редагувати профіль</button>

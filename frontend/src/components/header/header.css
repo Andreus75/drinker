@@ -2,7 +2,6 @@
     height: 100px;
     width: 100%;
     display: flex;
-    /*justify-content: center;*/
     background: cadetblue;
     border-bottom: 1px solid;
 }

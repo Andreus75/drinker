@@ -2,7 +2,7 @@ const Joi = require('joi');
 const { EMAIL_REGEXP } = require('../configs/constants');
 const {daysEnum} = require("../configs");
 
-const restorationCreateValidator = Joi.object({
+const      restorationCreateValidator = Joi.object({
     name: Joi.string()
         .min(2)
         .max(40)
@@ -53,7 +53,11 @@ const restorationCreateValidator = Joi.object({
         .trim(),
     email: Joi.string()
         .regex(EMAIL_REGEXP)
-        .required()
+        .required(),
+    photo: Joi.string(),
+    vi_fi: Joi.boolean(),
+    parking: Joi.boolean(),
+    music: Joi.boolean()
 });
 
 module.exports = {

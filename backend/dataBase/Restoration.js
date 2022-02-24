@@ -50,6 +50,21 @@ const restorationSchema = new Schema({
         required: true,
         enum: Object.values(daysEnum)
     },
+    vi_fi: {
+        type: Boolean,
+        default: false,
+        trim: true
+    },
+    music: {
+        type: Boolean,
+        default: false,
+        trim: true
+    },
+    parking: {
+        type: Boolean,
+        default: false,
+        trim: true
+    },
     photo: {
         type: String
     },

@@ -1,0 +1,24 @@
+.restorationInfo {
+    display: flex;
+    min-height: 300px;
+}
+
+.restorationInfo img {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.puyachok {
+    background: silver;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.news {
+    background: silver;
+    width: 100%;
+    min-height: 100px;
+}

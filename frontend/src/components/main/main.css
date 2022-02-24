@@ -6,8 +6,10 @@
     width: 100%;
 }
 .filter_section {
+    background: green;
     width: 20%;
 }
 .main_section {
+    background: #527e6f;
     width: 80%;
 }
